@@ -20,5 +20,20 @@ int main(int argc, char *argv[]) {
       "%d %d %d", i, j,
       k); // will output 1 1 2 since j = 1 is equivalent to 1 in the expression
 
+  // NOTE: The assignment operator requires an lvalue as a left operand
+  // an L-value is an object stored in memory like a variable and not a const
+  // or the result of a computation, v is an lvalue, 10 is not an lvalue
+  12 = i;    // invalid
+  i + j = 0; // invalid
+  -i = j;    // invalid
+
+  // NOTE: Compound Assignment Examples
+  i = i + 1;
+  i += 1;
+  i -= 1;
+  i *= 1;
+  i /= 1;
+  i %= 1;
+
   return EXIT_SUCCESS;
 }
